@@ -1,0 +1,606 @@
+
+  #home {padding-top:50px;color:white;}
+  #about {padding-top:150px;padding-bottom:0px;}
+  #work {padding-top:100px;padding-bottom:0px;}
+  #project {padding-top:100px;padding-bottom:0px;}
+  #skill {padding-top:100px;padding-bottom:0px;}
+  #contact {padding-top:100px;padding-bottom:0px;}
+  #resume {padding-top:100px;padding-bottom:0px;}
+
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    /* background: #fafafa; */
+    background-image: linear-gradient(-120deg, black, #1C2541, #3A506B, #5BC0BE);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i, span {
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3, #sidebar.active .CTAs {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important ;
+    }
+    a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+        top: auto;
+        bottom: 5px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3, #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i {
+        margin-right:  0;
+        display: block;
+    }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+    #sidebar {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* Autotype Starts*/
+.textLocation {
+    text-align: center;
+    margin-top: 4.5em;
+    margin-bottom: 3em;
+    font-size: 4em;
+    
+  }
+  
+  #autoType {
+    border-right: 2px solid #fff;
+  }
+  
+  .caretAnimation {
+    animation-name: caret;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+  }
+/* Autotype Ends*/
+
+/* Progress Bar Starts*/
+
+div.candidatos, div.text {
+    position:relative;
+    height: 40px;
+    margin:40px 20px;
+    padding-left:50px;
+}
+div.text p{
+    font-size: 10px;
+    font-weight: 600;
+    color: #9e9c9b;
+    text-transform: uppercase;
+}
+div.text p a{
+    color: #5e5c5b;
+}
+div.candidatos img {
+    position:absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    padding:1px;
+}
+div.candidatos .parcial {
+    display:inline-block;
+    width:100%;
+    height:40px;
+    vertical-align:middle;
+    padding: 0 0 0 10px;
+}
+div.candidatos .parcial .info {
+    height:15px;
+    position: relative;
+}
+div.candidatos .parcial .info > div {
+    float:left;
+}
+div.candidatos .parcial .info .nome {
+    position: absolute;
+    top: 0;
+    left:0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #192D49;
+}
+div.candidatos .parcial .info .eleito, div.candidatos .parcial .info .segundo-turno {
+    color: #fff;
+    padding: 0 5px 2px 5px;
+    border-radius: 2px;
+}
+div.candidatos .parcial .info .percentagem-num {
+    position: absolute;
+    top:0;
+    right:0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #192D49;
+}
+div.candidatos .parcial .progressBar {
+    position:relative;
+    width:100%;
+    height:7px;
+    margin:5px 0 2px;
+    border-radius:10px;
+    background: #e7e7e7;
+}
+div.candidatos .parcial .progressBar .percentagem {
+    position:absolute;
+    top:0;
+    left:0;
+    height:7px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #A4B5C0;
+    -webkit-transition: 5s all;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-name: animationProgress;
+}
+div.candidatos.html .parcial .percentagem {
+    background-color:blue;
+}
+div.candidatos.js .parcial .percentagem {
+    background-color:yellow;
+}
+div.candidatos.bs .parcial .percentagem {
+    background-color:#4086CD;
+}
+div.candidatos.py .parcial .percentagem {
+    background-color:#d9e07f;
+}
+div.candidatos.php .parcial .percentagem {
+    background-color:#788bcc;
+}
+div.candidatos.c .parcial .percentagem {
+    background-color:#e50685;
+}
+div.candidatos.mat .parcial .percentagem {
+    background-color:#048ad8;
+}
+div.candidatos.np .parcial .percentagem {
+    background-color:#046472;
+}
+div.candidatos.ajs .parcial .percentagem {
+    background-color:#dd3b3b;
+}
+div.candidatos.cc .parcial .percentagem {
+    background-color:#a4a3ff;
+}
+div.candidatos.un .parcial .percentagem {
+    background-color:orangered;
+}
+div.candidatos.cos .parcial .percentagem {
+    background-color:#cc60ff;
+}
+div.candidatos .parcial .partidas {
+    font-family: Arial, helvetica, Sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: #9e9c9b;
+    text-transform: uppercase;
+}
+.percentual {
+    -webkit-transition: 5s all;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-name: animationProgress;
+    transition: 5s all;
+    animation-duration: 5s;
+    animation-name: animationProgress;
+}
+@-webkit-keyframes animationProgress {
+    from {
+        width:0;
+    }
+}
+@keyframes animationProgress {
+    from {
+        width:0;
+    }
+}
+
+/* Progress Bar Ends*/
+
+/* TIMELINE starts */
+
+ul.timeline {
+    position: relative;
+    list-style-type: none;
+    padding-left: 180px;
+  }
+  ul.timeline:before {
+    position: absolute;
+    display: block;
+    left: 136px;
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #0077bb;
+    content: ' ';
+  }
+  ul.timeline .event {
+    position: relative;
+    padding: 16px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+  ul.timeline .event:before {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: -55px;
+    width: 30px;
+    height: 30px;
+    border: 6px solid #0077bb;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.6);
+    content: ' ';
+  }
+  ul.timeline h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  ul.timeline .time {
+    position: absolute;
+    display: block;
+    width: 120px;
+    top: 35px;
+    left: -179px;
+    font-size: 0.9em;
+    text-align: right;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  ul.timeline .time > .glyphicon-time {
+    top: 2px;
+  }
+  ul.timeline .left-arrow:before {
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #ddd;
+    border-left: 0 solid #ddd;
+    border-bottom: 15px solid transparent;
+    content: ' ';
+  }
+  ul.timeline .left-arrow:after {
+    position: absolute;
+    top: 30px;
+    left: -14px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #fff;
+    border-left: 0 solid #fff;
+    border-bottom: 15px solid transparent;
+    content: ' ';
+  }
+/* TIMELINE ends */
+
+/* SELFWRITTEN starts */
+.time{
+    color:white;
+}
+.page-header{
+    color:white;
+}
+.page-header small{
+    color:white;
+}
+.me {
+    display: block;
+    margin: 4em auto;
+    margin-bottom: 1em;
+    width: 200px;
+    height: 220px;
+    border-radius: 15%;
+    position: relative;
+    z-index: 2;
+  }
+.resume{
+    margin-bottom: 3em;
+}
+/* SELFWRITTEN ends */
+
+.btn-outline { 
+    margin-top: 15px; 
+    border: solid 1px #bbbbbb;    
+    font-size: 24px; 
+    color: #bbbbbb; 
+    background: 0 0; 
+    transition: all .3s ease-in-out; 
+   }
+   .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active { 
+     border: solid 1px #bbbbbb;    
+     color: #000; 
+     background: #bbbbbb; 
+   }
+   
+   .btn-social { 
+     display: inline-block; 
+     width: 48px; 
+     height: 48px; 
+     border: 1px solid #bbbbbb; 
+     border-radius: 100%; 
+     text-align: center; 
+     font-size: 24px; 
+     line-height: 46px; 
+   }
+   
+   
+   
+   .list-inline { 
+     padding-left: 0; 
+     list-style: none; 
+     margin-left: -5px; }
+   
+   .list-inline > li { 
+     display: inline-block;  
+     padding-left: 5px; 
+     padding-right: 5px; 
+   }
+   
+   .social-links { 
+     -webkit-animation: fade-in-down 0.9s; 
+     animation: fade-in-down 0.9s; 
+     -webkit-animation-delay: 0.2s; 
+     animation-delay: 0.2s; 
+   }
+   
+   /* Animations */
+   @-webkit-keyframes fade-in-down { 0% 
+     { opacity: 0; -webkit-transform: translateY(-10px); transform: translateY(-10px); 
+     }
+     100% { 
+       opacity: 1; 
+       -webkit-transform: translateY(0); 
+       transform: translateY(0); } }
+   @keyframes fade-in-down { 
+     0% { opacity: 0; 
+       -webkit-transform: translateY(-10px); 
+       transform: translateY(-10px); 
+     }
+     100% { opacity: 1; 
+       -webkit-transform: translateY(0); 
+       transform: translateY(0); 
+     } 
+   }
